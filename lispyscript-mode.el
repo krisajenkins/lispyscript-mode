@@ -16,10 +16,10 @@
   	 (1 font-lock-keyword-face)
   	 (2 font-lock-function-name-face))
 	(,(rx "("
-		  (group (or "var" "get" "set" "template" "doMonad" "monad" "withMonad" "testGroup" "testRunner"))
+		  (group (or "var" "template" "doMonad" "monad" "withMonad" "testGroup" "testRunner"))
 		  (one-or-more whitespace) (group (one-or-more word)))
   	 (1 font-lock-keyword-face)
-  	 (2 font-lock-function-name-face))
+  	 (2 font-lock-variable-name-face))
   	(,(rx "("
 		  (group (or "->"
 					 "array" "arrayInit" "arrayInit2d" "object" "new" "javascript"
@@ -35,7 +35,7 @@
 	(,(rx bow (group "~" (opt ?@) (one-or-more word) (opt "...")))
 	 (1 font-lock-type-face))
 	(,(rx bow (group "___" (one-or-more word)))
-	 (1 font-lock-variable-name-face))))
+	 (1 font-lock-type-face))))
 
 ;;;###autoload
 (defmacro lispyscript-mode/add-word-chars (&rest chars)
