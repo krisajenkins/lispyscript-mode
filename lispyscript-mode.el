@@ -3,7 +3,7 @@
 ;; Copyright 2013 Kris Jenkins
 ;; Author: Kris Jenkins
 ;; URL: https://github.com/krisajenkins/lispyscript-mode
-;; Version: 0.1.0
+;; Version: 0.2.0
 
 (require 'lisp-mode)
 (require 'font-lock)
