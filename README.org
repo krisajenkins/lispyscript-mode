@@ -1,0 +1,7 @@
+* LispyScript Mode
+
+A major mode for [[http://lispyscript.com/][LispyScript]].
+
+** Status
+
+Ready to use, but fairly basic. Feedback welcomed.
