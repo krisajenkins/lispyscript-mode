@@ -2,6 +2,22 @@
 
 A major mode for [[http://lispyscript.com/][LispyScript]].
 
+** Installation
+
+LispyScript mode is available as a package on Marmalade. If you
+haven't already, you can hook up to Marmalade with:
+
+#+BEGIN_SRC emacs-lisp
+(require 'package)
+(add-to-list 'package-archives
+    '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+#+END_SRC
+
+Then call: =M-x package-install lispyscript-mode=
+
+/Alternatively/, just grab the single =lispyscript-mode.el= and install that in your preferred way.
+
 ** Status
 
 Ready to use, but fairly basic. Feedback welcomed.
