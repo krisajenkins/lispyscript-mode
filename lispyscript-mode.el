@@ -10,7 +10,9 @@
 
 ;;;###autoload
 (defvar lispyscript-font-lock-defaults
-  `((,(rx "(" (group (or "macro")) (one-or-more whitespace) (group (one-or-more word)))
+  `((,(rx "("
+		  (group "macro")
+		  (one-or-more whitespace) (group (one-or-more word)))
   	 (1 font-lock-keyword-face)
   	 (2 font-lock-function-name-face))
 	(,(rx "("
