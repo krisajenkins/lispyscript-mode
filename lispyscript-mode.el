@@ -39,8 +39,11 @@
   "Major mode for LispyScript"
   (modify-syntax-entry ?_ "w" lispyscript-mode-syntax-table)
   (modify-syntax-entry ?~ "w" lispyscript-mode-syntax-table)
+  (modify-syntax-entry ?. "w" lispyscript-mode-syntax-table)
   (modify-syntax-entry ?- "w" lispyscript-mode-syntax-table)
   (modify-syntax-entry ?> "w" lispyscript-mode-syntax-table)
+  (modify-syntax-entry ?< "w" lispyscript-mode-syntax-table)
+  (modify-syntax-entry ?! "w" lispyscript-mode-syntax-table)
   (modify-syntax-entry ?? "w" lispyscript-mode-syntax-table)
   (setq font-lock-defaults '((lispyscript-font-lock-defaults))))
 
