@@ -38,16 +38,16 @@
 	 (1 font-lock-variable-name-face))))
 
 ;;;###autoload
+(defmacro lispyscript-mode/add-word-chars (&rest chars)
+  (cons 'progn
+		(mapcar (lambda (char)
+				  `(modify-syntax-entry ,char "w" lispyscript-mode-syntax-table))
+				chars)))
+
+;;;###autoload
 (define-derived-mode lispyscript-mode lisp-mode "LispyScript"
   "Major mode for LispyScript"
-  (modify-syntax-entry ?_ "w" lispyscript-mode-syntax-table)
-  (modify-syntax-entry ?~ "w" lispyscript-mode-syntax-table)
-  (modify-syntax-entry ?. "w" lispyscript-mode-syntax-table)
-  (modify-syntax-entry ?- "w" lispyscript-mode-syntax-table)
-  (modify-syntax-entry ?> "w" lispyscript-mode-syntax-table)
-  (modify-syntax-entry ?< "w" lispyscript-mode-syntax-table)
-  (modify-syntax-entry ?! "w" lispyscript-mode-syntax-table)
-  (modify-syntax-entry ?? "w" lispyscript-mode-syntax-table)
+  (lispyscript-mode/add-word-chars ?_ ?~ ?. ?- ?> ?< ?! ??)
   (setq font-lock-defaults '((lispyscript-font-lock-defaults))))
 
 ;;;###autoload
