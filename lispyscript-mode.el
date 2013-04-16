@@ -57,7 +57,7 @@ Optional argument CHARS Characters to add to the syntax table."
 (define-derived-mode lispyscript-mode lisp-mode "LispyScript"
   "Major mode for LispyScript"
   (lispyscript-mode/add-word-chars ?_ ?~ ?. ?- ?> ?< ?! ??)
-  (setq font-lock-defaults '((lispyscript-font-lock-defaults))))
+  (setq font-lock-defaults '(lispyscript-font-lock-defaults)))
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.ls$" . lispyscript-mode))
