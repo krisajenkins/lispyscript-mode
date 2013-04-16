@@ -3,7 +3,7 @@
 ;; Copyright 2013 Kris Jenkins
 ;; Author: Kris Jenkins
 ;; URL: https://github.com/krisajenkins/lispyscript-mode
-;; Version: 0.3.0
+;; Version: 0.3.1
 
 ;;; Commentary:
 ;;
