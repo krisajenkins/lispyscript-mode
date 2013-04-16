@@ -28,7 +28,9 @@
 					 "template-repeat" "template-repeat-key"
 					 "include"
 					 "assert")))
-  	 (1 font-lock-keyword-face))))
+  	 (1 font-lock-keyword-face))
+	(,(rx bow (group "~" (opt ?@) (one-or-more word) (opt "...")))
+	 (1 font-lock-type-face))))
 
 ;;;###autoload
 (define-derived-mode lispyscript-mode lisp-mode "LispyScript"
