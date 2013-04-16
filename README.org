@@ -6,7 +6,8 @@ A major mode for [[http://lispyscript.com/][LispyScript]].
 
 =M-x package-install lispyscript-mode=
 
-...if you're hooked up to Marmalade. If not, add this to your =.emacs= first:
+...if you're hooked up to [[http://marmalade-repo.org/][Marmalade]] or [[http://melpa.milkbox.net/][MELPA]].
+If not, add this to your =.emacs= first:
 
 #+BEGIN_SRC emacs-lisp
 (require 'package)
