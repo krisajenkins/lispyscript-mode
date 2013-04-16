@@ -30,7 +30,9 @@
 					 "assert")))
   	 (1 font-lock-keyword-face))
 	(,(rx bow (group "~" (opt ?@) (one-or-more word) (opt "...")))
-	 (1 font-lock-type-face))))
+	 (1 font-lock-type-face))
+	(,(rx bow (group "___" (one-or-more word)))
+	 (1 font-lock-variable-name-face))))
 
 ;;;###autoload
 (define-derived-mode lispyscript-mode lisp-mode "LispyScript"
