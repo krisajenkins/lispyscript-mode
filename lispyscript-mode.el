@@ -13,12 +13,20 @@
   `((,(rx "(" (group (or "macro")) (one-or-more whitespace) (group (one-or-more word)))
   	 (1 font-lock-keyword-face)
   	 (2 font-lock-function-name-face))
-  	(,(rx "(" (group (or "var" "set")) (one-or-more whitespace) (group (one-or-more word)))
+  	(,(rx "("
+		  (group (or "var" "set" "template" "doMonad" "monad" "withMonad" "testGroup" "testRunner"))
+		  (one-or-more whitespace) (group (one-or-more word)))
   	 (1 font-lock-keyword-face)
   	 (2 font-lock-variable-name-face))
-  	(,(rx "(" (group (or "if" "function" "try" "catch" "require" "eval" "include")))
-  	 (1 font-lock-keyword-face))
-  	(,(rx "(" (group (or "each" "javascript" "str" "object" "template" "sequence")))
+  	(,(rx "("
+		  (group (or "->"
+					 "array" "arrayInit" "arrayInit2d" "object" "new" "javascript"
+					 "if" "cond" "when" "unless" "do" "function" "try" "catch" "throw" "loop"
+					 "each" "each2d" "eachKey" "reduce" "map" "for"
+					 "template-repeat" "template-repeat-key"
+					 "include"
+					 "assert"
+					 )))
   	 (1 font-lock-keyword-face))))
 
 ;;;###autoload
