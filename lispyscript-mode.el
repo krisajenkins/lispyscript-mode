@@ -5,6 +5,10 @@
 ;; URL: https://github.com/krisajenkins/lispyscript-mode
 ;; Version: 0.3.0
 
+;;; Commentary:
+;;
+;; A major mode for LispyScript http://lispyscript.com/
+
 (require 'lisp-mode)
 (require 'font-lock)
 
