@@ -16,10 +16,10 @@
   	 (1 font-lock-keyword-face)
   	 (2 font-lock-function-name-face))
 	(,(rx "("
-		  (group (or "var" "set" "template" "doMonad" "monad" "withMonad" "testGroup" "testRunner"))
+		  (group (or "var" "get" "set" "template" "doMonad" "monad" "withMonad" "testGroup" "testRunner"))
 		  (one-or-more whitespace) (group (one-or-more word)))
   	 (1 font-lock-keyword-face)
-  	 (2 font-lock-variable-name-face))
+  	 (2 font-lock-function-name-face))
   	(,(rx "("
 		  (group (or "->"
 					 "array" "arrayInit" "arrayInit2d" "object" "new" "javascript"
@@ -27,8 +27,11 @@
 					 "each" "each2d" "eachKey" "reduce" "map" "for"
 					 "template-repeat" "template-repeat-key"
 					 "include"
+					 "true" "false"
 					 "assert")))
   	 (1 font-lock-keyword-face))
+	(,(rx bow (group (or "true" "false")))
+	 (1 font-lock-keyword-face))
 	(,(rx bow (group "~" (opt ?@) (one-or-more word) (opt "...")))
 	 (1 font-lock-type-face))
 	(,(rx bow (group "___" (one-or-more word)))
