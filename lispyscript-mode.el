@@ -13,7 +13,7 @@
   `((,(rx "(" (group (or "macro")) (one-or-more whitespace) (group (one-or-more word)))
   	 (1 font-lock-keyword-face)
   	 (2 font-lock-function-name-face))
-  	(,(rx "("
+	(,(rx "("
 		  (group (or "var" "set" "template" "doMonad" "monad" "withMonad" "testGroup" "testRunner"))
 		  (one-or-more whitespace) (group (one-or-more word)))
   	 (1 font-lock-keyword-face)
@@ -25,8 +25,7 @@
 					 "each" "each2d" "eachKey" "reduce" "map" "for"
 					 "template-repeat" "template-repeat-key"
 					 "include"
-					 "assert"
-					 )))
+					 "assert")))
   	 (1 font-lock-keyword-face))))
 
 ;;;###autoload
