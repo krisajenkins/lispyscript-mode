@@ -16,7 +16,7 @@ If not, add this to your =.emacs= first:
 (package-initialize)
 #+END_SRC
 
-/(You only need one of the =package-archives= lines, Marmalade or MELPA, but there's no harm in having both.)/
+/(You only need one of the package-archives lines - Marmalade or MELPA - but there's no harm in having both.)/
 
 /Alternatively/, just grab the single =lispyscript-mode.el= and install that in your preferred way.
 
