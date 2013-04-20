@@ -1,9 +1,10 @@
 ;;; lispyscript-mode.el --- Major mode for LispyScript code.
 
 ;; Copyright 2013 Kris Jenkins
+
 ;; Author: Kris Jenkins <krisajenkins@gmail.com>
 ;; Maintainer: Kris Jenkins <krisajenkins@gmail.com>
-;; Keywords: lisp javascript
+;; Keywords: lisp languages
 ;; URL: https://github.com/krisajenkins/lispyscript-mode
 ;; Created: 16th April 2013
 ;; Version: 0.3.2
@@ -17,6 +18,14 @@
 (require 'rx)
 
 ;;; Code:
+(defgroup lispyscript nil
+  "A major mode for Lispyscript"
+  :group 'languages)
+
+(defcustom lispyscript-mode/file-extension ".ls"
+  "LispyScript file extension."
+  :type 'string
+  :group lispyscript)
 
 (defvar lispyscript-font-lock-defaults
   `((,(rx "("
@@ -62,7 +71,8 @@ Optional argument CHARS Characters to add to the syntax table."
   (setq font-lock-defaults '(lispyscript-font-lock-defaults)))
 
 ;;;###autoload
-(add-to-list 'auto-mode-alist '("\\.ls$" . lispyscript-mode))
+(when lispyscript-mode/file-extension
+	(add-to-list 'auto-mode-alist (cons lispyscript-mode/file-extension 'lispyscript-mode)))
 
 (provide 'lispyscript-mode)
 ;;; lispyscript-mode.el ends here
