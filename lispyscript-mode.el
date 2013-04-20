@@ -1,8 +1,11 @@
 ;;; lispyscript-mode.el --- Major mode for LispyScript code.
 
 ;; Copyright 2013 Kris Jenkins
-;; Author: Kris Jenkins
+;; Author: Kris Jenkins <krisajenkins@gmail.com>
+;; Maintainer: Kris Jenkins <krisajenkins@gmail.com>
+;; Keywords: lisp javascript
 ;; URL: https://github.com/krisajenkins/lispyscript-mode
+;; Created: 16th April 2013
 ;; Version: 0.3.1
 
 ;;; Commentary:
