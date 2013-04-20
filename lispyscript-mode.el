@@ -6,7 +6,7 @@
 ;; Keywords: lisp javascript
 ;; URL: https://github.com/krisajenkins/lispyscript-mode
 ;; Created: 16th April 2013
-;; Version: 0.3.1
+;; Version: 0.3.2
 
 ;;; Commentary:
 ;;
