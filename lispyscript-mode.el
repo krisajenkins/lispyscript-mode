@@ -17,7 +17,6 @@
 
 ;;; Code:
 
-;;;###autoload
 (defvar lispyscript-font-lock-defaults
   `((,(rx "("
           (group "macro")
@@ -46,7 +45,6 @@
     (,(rx bow (group "___" (one-or-more word)))
      (1 font-lock-type-face))))
 
-;;;###autoload
 (defmacro lispyscript-mode/add-word-chars (&rest chars)
   "Convenient way to add many word-constituent characters to the syntax table.
 
