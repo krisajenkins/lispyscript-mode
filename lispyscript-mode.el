@@ -14,6 +14,7 @@
 
 (require 'lisp-mode)
 (require 'font-lock)
+(require 'rx)
 
 ;;; Code:
 
