@@ -25,7 +25,7 @@
 (defcustom lispyscript-mode/file-extension ".ls"
   "LispyScript file extension."
   :type 'string
-  :group lispyscript)
+  :group 'lispyscript)
 
 (defvar lispyscript-font-lock-defaults
   `((,(rx "("
