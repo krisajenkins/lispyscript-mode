@@ -72,7 +72,7 @@ Optional argument CHARS Characters to add to the syntax table."
 
 ;;;###autoload
 (when lispyscript-mode/file-extension
-	(add-to-list 'auto-mode-alist (cons lispyscript-mode/file-extension 'lispyscript-mode)))
+	(add-to-list 'auto-mode-alist (cons (rx-to-string lispyscript-mode/file-extension) 'lispyscript-mode)))
 
 (provide 'lispyscript-mode)
 ;;; lispyscript-mode.el ends here
