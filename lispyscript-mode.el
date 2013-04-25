@@ -22,6 +22,7 @@
   "A major mode for Lispyscript"
   :group 'languages)
 
+;;;###autoload
 (defcustom lispyscript-mode/file-extension ".ls"
   "LispyScript file extension."
   :type 'string
