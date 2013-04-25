@@ -7,7 +7,7 @@
 ;; Keywords: lisp languages
 ;; URL: https://github.com/krisajenkins/lispyscript-mode
 ;; Created: 16th April 2013
-;; Version: 0.3.3
+;; Version: 0.3.4
 
 ;;; Commentary:
 ;;
