@@ -17,17 +17,6 @@
 (require 'font-lock)
 (require 'rx)
 
-;;; Code:
-(defgroup lispyscript nil
-  "A major mode for Lispyscript"
-  :group 'languages)
-
-;;;###autoload
-(defcustom lispyscript-mode/file-extension ".ls"
-  "LispyScript file extension."
-  :type 'string
-  :group 'lispyscript)
-
 (defvar lispyscript-font-lock-defaults
   `((,(rx "("
           (group "macro")
@@ -72,8 +61,7 @@ Optional argument CHARS Characters to add to the syntax table."
   (setq font-lock-defaults '(lispyscript-font-lock-defaults)))
 
 ;;;###autoload
-(when lispyscript-mode/file-extension
-	(add-to-list 'auto-mode-alist (cons (rx-to-string lispyscript-mode/file-extension) 'lispyscript-mode)))
+(add-to-list 'auto-mode-alist (cons "\\.ls\\'" 'lispyscript-mode))
 
 (provide 'lispyscript-mode)
 ;;; lispyscript-mode.el ends here
