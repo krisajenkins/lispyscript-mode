@@ -39,6 +39,13 @@
                      "assert"))
 	  word-end)
      (1 font-lock-keyword-face))
+    ;; Match a single-quoted string, handling escapes, using "Friedl's Unrolled Loop" pattern.
+    (,(rx (group "'"
+		 (* (not (in "\\'")))
+		 (* "\\" anything
+		    (* (not (in "\\'"))))
+		 "'"))
+     (1 font-lock-string-face))
     (,(rx bow (group (or "true" "false")))
      (1 font-lock-keyword-face))
     (,(rx bow (group "~" (opt ?@) (one-or-more word) (opt "...")))
