@@ -25,7 +25,7 @@
      (2 font-lock-function-name-face))
     (,(rx "("
           (group (or "var" "template" "doMonad" "monad" "withMonad" "testGroup" "testRunner"))
-          (one-or-more whitespace) (group (one-or-more word)))
+          (one-or-more (or "\n" whitespace)) (group (one-or-more word)))
      (1 font-lock-keyword-face)
      (2 font-lock-variable-name-face))
     (,(rx "("
@@ -36,7 +36,8 @@
                      "template-repeat" "template-repeat-key"
                      "include"
                      "true" "false"
-                     "assert")))
+                     "assert"))
+	  word-end)
      (1 font-lock-keyword-face))
     (,(rx bow (group (or "true" "false")))
      (1 font-lock-keyword-face))
