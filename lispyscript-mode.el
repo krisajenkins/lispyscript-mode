@@ -55,19 +55,12 @@
     (,(rx bow (group "___" (one-or-more word)))
      (1 font-lock-type-face))))
 
-(defmacro lispyscript-mode/add-word-chars (&rest chars)
-  "Convenient way to add many word-constituent characters to the syntax table.
-
-Optional argument CHARS Characters to add to the syntax table."
-  (cons 'progn
-        (mapcar (lambda (char)
-                  `(modify-syntax-entry ,char "w" lispyscript-mode-syntax-table))
-                chars)))
-
 ;;;###autoload
 (define-derived-mode lispyscript-mode lisp-mode "LispyScript"
   "Major mode for LispyScript"
-  (lispyscript-mode/add-word-chars ?_ ?~ ?. ?- ?> ?< ?! ??)
+  (dolist '(lambda (char)
+	     (modify-syntax-entry char "w" lispyscript-mode-syntax-table))
+    '(?_ ?~ ?. ?- ?> ?< ?! ??))
   (setq font-lock-defaults '(lispyscript-font-lock-defaults)))
 
 ;;;###autoload
