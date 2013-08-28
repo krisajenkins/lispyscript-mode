@@ -17,6 +17,8 @@
 (require 'font-lock)
 (require 'rx)
 
+;;; Code:
+
 (defvar lispyscript-font-lock-defaults
   `((,(rx "("
           (group "macro")
