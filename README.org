@@ -4,7 +4,7 @@ A major mode for [[http://lispyscript.com/][LispyScript]].
 
 ** Installation
 
-If you're hooked up to [[http://melpa.milkbox.net/][MELPA]]:
+If you're hooked up to [[https://melpa.org/][MELPA]]:
 
 #+BEGIN_EXAMPLE
 M-x package-refresh-contents
